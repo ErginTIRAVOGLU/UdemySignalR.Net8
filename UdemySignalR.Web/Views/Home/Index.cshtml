@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div id="div-connection-id" class="alert alert-primary"></div>
+            <input type="text" class="form-control-plaintext" id="connectionId" placeholder="connection Id" />
+            Connected Client Count : <span id="span-connected-client-count" class=" text-bg-primary"></span>
+             <button id="btn-send-message-all-client" class="btn btn-primary">Tüm clientlara gönder</button>
+             <button id="btn-send-message-caller-client" class="btn btn-primary">İstek yapan client'a gönder</button>
+             <button id="btn-send-message-other-clients" class="btn btn-primary">Diğer client'lara gönder</button>
+             <button id="btn-send-message-special-clients" class="btn btn-primary">Special client'a gönder</button>
+        </div>
+       
+        <div class="col-md-8 offset-md-2">
+            <hr />
+            <div id="groupList" class="alert alert-warning"></div>
+            <button id="btn-groupA-add" class="btn btn-primary">A Grubuna katıl</button>
+            <button id="btn-groupA-remove" class="btn btn-primary">A Grubundan çık</button>
+
+            <button id="btn-groupB-add" class="btn btn-primary">B Grubuna katıl</button>
+            <button id="btn-groupB-remove" class="btn btn-primary">B Grubundan çık</button>
+
+            <button id="btn-groupA-send-message" class="btn btn-primary">A Grubuna Mesaj Gönder</button>
+            <button id="btn-groupB-send-message" class="btn btn-primary">B Grubuna Mesaj Gönder</button>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+<script src="~/js/signalR/signalr-client.js"></script>
+}
